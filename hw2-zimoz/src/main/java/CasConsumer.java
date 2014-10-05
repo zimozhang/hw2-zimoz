@@ -1,4 +1,4 @@
-package descriptors;
+
 
 
 import java.io.File;
@@ -14,7 +14,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 
-import edu.cmu.type.geneTag;
 
 public class CasConsumer extends CasConsumer_ImplBase implements CasObjectProcessor {
   File outFile;

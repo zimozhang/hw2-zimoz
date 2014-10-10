@@ -14,18 +14,42 @@
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
+    <configurationParameter>
+        <name>SAMPLE_FILE</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>COMPARE_FILE</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
         <name>outputdocument</name>
         <value>
-          <string>/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/data/hw2-zimoz.out</string>
+          <string>hw2-zimoz.out</string>
+        </value>
+      </nameValuePair>
+    <nameValuePair>
+        <name>SAMPLE_FILE</name>
+        <value>
+          <string>sample.out</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>COMPARE_FILE</name>
+        <value>
+          <string>/compare.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/typeSystemDescriptor.xml"/>
+        <import name="typeSystemDescriptor"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

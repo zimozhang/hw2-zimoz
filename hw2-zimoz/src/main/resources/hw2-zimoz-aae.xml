@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="aeDescriptorStanford">
+      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorStanford.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="aeDescriptorLingPipe">
+      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorLingPipe.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="aeDescriptorABNER">
+      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorABNER.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="aeDescriptorMerge">
+      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorMerge.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw2-zimoz-aae</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>aeDescriptorStanford</node>
+        <node>aeDescriptorLingPipe</node>
+        <node>aeDescriptorABNER</node>
+        <node>aeDescriptorMerge</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -6,7 +6,29 @@
     <vendor/>
   <types>
     <typeDescription>
-      <name>geneTag</name>
+      <name>types.geneTag</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>ID</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>Text</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>casProcessorId</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>types.resultTag</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -23,7 +45,7 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>sentenceTag</name>
+      <name>types.sentenceTag</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>

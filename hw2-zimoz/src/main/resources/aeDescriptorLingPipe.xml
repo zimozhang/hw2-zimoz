@@ -32,19 +32,19 @@
       <nameValuePair>
         <name>ModelFile</name>
         <value>
-          <string>/ne-en-bio-genetag.HmmChunker</string>
+          <string>ne-en-bio-genetag.HmmChunker</string>
         </value>
       </nameValuePair>
       <nameValuePair>
         <name>SampleFile</name>
         <value>
-          <string>/sample.out</string>
+          <string>sample.out</string>
         </value>
       </nameValuePair>
       <nameValuePair>
         <name>CompareFile</name>
         <value>
-          <string>/compare.out</string>
+          <string>compare.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

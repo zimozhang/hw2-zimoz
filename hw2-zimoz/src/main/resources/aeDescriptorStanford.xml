@@ -26,13 +26,13 @@
       <nameValuePair>
         <name>SAMPLE_FILE</name>
         <value>
-          <string>src/main/resources/data/sample.out</string>
+          <string>sample.out</string>
         </value>
       </nameValuePair>
       <nameValuePair>
         <name>COMPARE_FILE</name>
         <value>
-          <string>src/main/resources/data/compare.out</string>
+          <string>compare.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

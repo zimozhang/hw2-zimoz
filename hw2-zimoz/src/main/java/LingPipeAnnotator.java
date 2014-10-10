@@ -43,6 +43,7 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
   String line = null;
   int correct;// the right number of geneTag
   int totalrecognitions;
+  int samplenumber;
   private HashSet<String> hs;
   
 //private final static String lingpipeset = "src/main/resources/data/ne-en-bio-genetag.HmmChunker";
@@ -80,6 +81,7 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
         String ln;
         while ((ln = br.readLine()) != null) {
           hs.add(ln);
+          samplenumber++;
         }
       } catch (Exception e) {
         e.printStackTrace();
@@ -178,7 +180,13 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
      */
     if (bw != null) {
       Double precision = (Double) (correct * 1.0 / totalrecognitions * 1.0);
-      System.out.println("LingPipeAnnotator precision="+precision);
+      Double recall=(Double)(correct*1.0/samplenumber*1.0);
+      Double F=(Double) 2.0* precision*recall/(precision+recall);
+      System.out.println("########## This is LingPipedAnnotator ############");
+      System.out.println("precision="+precision);
+      System.out.println("recall="+recall);
+      System.out.println("F-measure="+F);
+      System.out.println();
       try {
         bw.close();
       } catch (IOException e) {

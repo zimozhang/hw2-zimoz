@@ -48,7 +48,7 @@ public class StanfordAnnotator extends JCasAnnotator_ImplBase {
   String line = null;
 
   int correct;// the right number of geneTag
-
+  int samplenumber;
   int totalrecognitions;
 
   private HashSet<String> s;
@@ -67,6 +67,7 @@ public class StanfordAnnotator extends JCasAnnotator_ImplBase {
       
       while ((line = br.readLine()) != null) {
         s.add(line);
+        samplenumber++;
       }
     } catch (Exception e) {
       e.printStackTrace();
@@ -171,7 +172,13 @@ public class StanfordAnnotator extends JCasAnnotator_ImplBase {
      */
     if (bw != null) {
       Double precision = (Double) (correct * 1.0 / totalrecognitions * 1.0);
-      System.out.println("StanfordAnnotator precision="+precision);
+      Double recall=(Double)(correct*1.0/samplenumber*1.0);
+      Double F=(Double) 2.0* precision*recall/(precision+recall);
+      System.out.println("########## This is StanfordAnnotator ############");
+      System.out.println("precision="+precision);
+      System.out.println("recall="+recall);
+      System.out.println("F-measure="+F);
+      System.out.println();
       try {
         bw.close();
       } catch (IOException e) {

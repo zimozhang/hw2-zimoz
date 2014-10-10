@@ -4,16 +4,16 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="aeDescriptorStanford">
-      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorStanford.xml"/>
+      <import location="aeDescriptorStanford.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="aeDescriptorLingPipe">
-      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorLingPipe.xml"/>
+      <import location="aeDescriptorLingPipe.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="aeDescriptorABNER">
-      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorABNER.xml"/>
+      <import location="aeDescriptorABNER.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="aeDescriptorMerge">
-      <import location="/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/aeDescriptorMerge.xml"/>
+      <import location="aeDescriptorMerge.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>

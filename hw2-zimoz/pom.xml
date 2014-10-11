@@ -99,7 +99,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:zimozhang/hw2-zimoz.git</connection>
 		<developerConnection>scm:git:git@github.com:zimozhang/hw2-zimoz.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>hw2-zimoz-0.0.4</tag>
   </scm>
 	<dependencyManagement>
 		<dependencies>

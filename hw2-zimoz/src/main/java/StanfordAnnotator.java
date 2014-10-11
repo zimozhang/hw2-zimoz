@@ -15,8 +15,8 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import types.geneTag;
-import types.sentenceTag;
+import types.GeneTag;
+import types.SentenceTag;
 
 
 public class StanfordAnnotator extends JCasAnnotator_ImplBase {
@@ -103,7 +103,7 @@ public class StanfordAnnotator extends JCasAnnotator_ImplBase {
     // iterate
     while (iter.isValid()) {
 
-      sentenceTag a = (sentenceTag) iter.get();
+      SentenceTag a = (SentenceTag) iter.get();
       String docText = a.getText();
       PosTagNamedEntityRecognizer recognizer = null;
       try {
@@ -120,7 +120,7 @@ public class StanfordAnnotator extends JCasAnnotator_ImplBase {
       int end = 0;
 
       for (Map.Entry<Integer, Integer> pairs : mymap.entrySet()) {
-        geneTag b = new geneTag(aJCas);
+        GeneTag b = new GeneTag(aJCas);
         b.setID(id);
         b.setBegin(pairs.getKey());
         b.setEnd(pairs.getValue());

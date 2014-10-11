@@ -6,7 +6,7 @@
     <vendor/>
   <types>
     <typeDescription>
-      <name>types.geneTag</name>
+      <name>types.GeneTag</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -28,7 +28,7 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>types.resultTag</name>
+      <name>types.SentenceTag</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -44,8 +44,8 @@
         </featureDescription>
       </features>
     </typeDescription>
-    <typeDescription>
-      <name>types.sentenceTag</name>
+  <typeDescription>
+      <name>types.ResultTag</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>

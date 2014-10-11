@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Thu Oct 09 23:11:57 EDT 2014 */
+/* First created by JCasGen Fri Oct 10 20:35:56 EDT 2014 */
 package types;
 
 import org.apache.uima.jcas.JCas;
@@ -14,9 +14,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Thu Oct 09 23:11:57 EDT 2014
+ * Updated by JCasGen Fri Oct 10 20:35:56 EDT 2014
  * @generated */
-public class resultTag_Type extends Annotation_Type {
+public class SentenceTag_Type extends Annotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -26,25 +26,25 @@ public class resultTag_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (resultTag_Type.this.useExistingInstance) {
+  			 if (SentenceTag_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = resultTag_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = SentenceTag_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new resultTag(addr, resultTag_Type.this);
-  			   resultTag_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new SentenceTag(addr, SentenceTag_Type.this);
+  			   SentenceTag_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new resultTag(addr, resultTag_Type.this);
+        } else return new SentenceTag(addr, SentenceTag_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = resultTag.typeIndexID;
+  public final static int typeIndexID = SentenceTag.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("types.resultTag");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("types.SentenceTag");
  
   /** @generated */
   final Feature casFeat_ID;
@@ -56,7 +56,7 @@ public class resultTag_Type extends Annotation_Type {
    */ 
   public String getID(int addr) {
         if (featOkTst && casFeat_ID == null)
-      jcas.throwFeatMissing("ID", "types.resultTag");
+      jcas.throwFeatMissing("ID", "types.SentenceTag");
     return ll_cas.ll_getStringValue(addr, casFeatCode_ID);
   }
   /** @generated
@@ -65,7 +65,7 @@ public class resultTag_Type extends Annotation_Type {
    */    
   public void setID(int addr, String v) {
         if (featOkTst && casFeat_ID == null)
-      jcas.throwFeatMissing("ID", "types.resultTag");
+      jcas.throwFeatMissing("ID", "types.SentenceTag");
     ll_cas.ll_setStringValue(addr, casFeatCode_ID, v);}
     
   
@@ -80,7 +80,7 @@ public class resultTag_Type extends Annotation_Type {
    */ 
   public String getText(int addr) {
         if (featOkTst && casFeat_Text == null)
-      jcas.throwFeatMissing("Text", "types.resultTag");
+      jcas.throwFeatMissing("Text", "types.SentenceTag");
     return ll_cas.ll_getStringValue(addr, casFeatCode_Text);
   }
   /** @generated
@@ -89,7 +89,7 @@ public class resultTag_Type extends Annotation_Type {
    */    
   public void setText(int addr, String v) {
         if (featOkTst && casFeat_Text == null)
-      jcas.throwFeatMissing("Text", "types.resultTag");
+      jcas.throwFeatMissing("Text", "types.SentenceTag");
     ll_cas.ll_setStringValue(addr, casFeatCode_Text, v);}
     
   
@@ -101,7 +101,7 @@ public class resultTag_Type extends Annotation_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public resultTag_Type(JCas jcas, Type casType) {
+  public SentenceTag_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

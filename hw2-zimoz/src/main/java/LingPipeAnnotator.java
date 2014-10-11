@@ -16,8 +16,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import types.geneTag;
-import types.sentenceTag;
+import types.GeneTag;
+import types.SentenceTag;
+
 
 import com.aliasi.chunk.Chunk;
 import com.aliasi.chunk.Chunker;
@@ -121,10 +122,10 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
 
-    FSIterator<Annotation> it = aJCas.getAnnotationIndex(sentenceTag.type).iterator();
+    FSIterator<Annotation> it = aJCas.getAnnotationIndex(SentenceTag.type).iterator();
     while (it.hasNext()) {
      
-     sentenceTag s = (sentenceTag) it.next();
+     SentenceTag s = (SentenceTag) it.next();
     
      String sIdentify = s.getID();
      
@@ -136,7 +137,7 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
      
      for (int i = 0; i < carray.length; i++) {
       
-      geneTag g = new geneTag(aJCas);
+      GeneTag g = new GeneTag(aJCas);
       totalrecognitions++;
       g.setID(sIdentify);
       g.setBegin(carray[i].start());

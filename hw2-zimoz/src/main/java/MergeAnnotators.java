@@ -9,8 +9,8 @@ import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 
-import types.geneTag;
-import types.resultTag;
+import types.GeneTag;
+import types.ResultTag;
 
 /**
  * This annotator is for merging the results we got from the three different annotators before.
@@ -45,10 +45,10 @@ public class MergeAnnotators extends JCasAnnotator_ImplBase {
 //    if(Identify=="1"){     
 //    }
     
-    Iterator annotationIter = aJCas.getAnnotationIndex(geneTag.type).iterator();
+    Iterator annotationIter = aJCas.getAnnotationIndex(GeneTag.type).iterator();
     finalresult=new HashMap<String, Integer>();
     while (annotationIter.hasNext()) {
-      geneTag gt= (geneTag) annotationIter.next();
+      GeneTag gt= (GeneTag) annotationIter.next();
       String info=gt.getID()+"|"+gt.getStart()+" "+gt.getEnd()+"|"+gt.getText();
       if(finalresult.containsKey(info)){
         finalresult.put(info, finalresult.get(info)+1);
@@ -62,7 +62,7 @@ public class MergeAnnotators extends JCasAnnotator_ImplBase {
     {
       if(finalresult.get(key)>=2)
       {
-        resultTag t=new resultTag(aJCas);
+        ResultTag t=new ResultTag(aJCas);
           t.setText(key);
           t.addToIndexes();
               

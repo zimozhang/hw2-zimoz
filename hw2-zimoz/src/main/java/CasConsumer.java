@@ -17,7 +17,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 
-import types.resultTag;
+import types.ResultTag;
 
 
 public class CasConsumer extends CasConsumer_ImplBase implements CasObjectProcessor {
@@ -69,7 +69,7 @@ public class CasConsumer extends CasConsumer_ImplBase implements CasObjectProces
     
     try {
 //      outFile = new File("outputdocument");
-      outFile = new File("hw2-zimoz.out");
+      outFile = new File("/home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/hw1-zimoz.out");
       fileWriter = new FileWriter(outFile);
 //      fileWriter = new FileWriter(compareFile);
     } catch (IOException e2) {
@@ -129,9 +129,9 @@ public class CasConsumer extends CasConsumer_ImplBase implements CasObjectProces
   * Iterates and prints annotations.
   * Counts the correct and total number of recognitions in the meanwhile.
   */
-    Iterator annotationIter = jcas.getAnnotationIndex(resultTag.type).iterator();
+    Iterator annotationIter = jcas.getAnnotationIndex(ResultTag.type).iterator();
     while (annotationIter.hasNext()) {
-      resultTag r= (resultTag) annotationIter.next();
+      ResultTag r= (ResultTag) annotationIter.next();
 //      String aText = r.getCoveredText();
       totalrecognitions++;
       String info=r.getText();

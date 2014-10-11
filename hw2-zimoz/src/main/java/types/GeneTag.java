@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Thu Oct 09 23:11:57 EDT 2014 */
+/* First created by JCasGen Fri Oct 10 20:35:56 EDT 2014 */
 package types;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,15 +11,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Oct 09 23:11:57 EDT 2014
+ * Updated by JCasGen Fri Oct 10 20:35:56 EDT 2014
  * XML source: /home/zimo/git/hw2-zimoz/hw2-zimoz/src/main/resources/typeSystemDescriptor.xml
  * @generated */
-public class geneTag extends Annotation {
+public class GeneTag extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(geneTag.class);
+  public final static int typeIndexID = JCasRegistry.register(GeneTag.class);
   /** @generated
    * @ordered 
    */
@@ -33,14 +33,14 @@ public class geneTag extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected geneTag() {/* intentionally empty block */}
+  protected GeneTag() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
-  public geneTag(int addr, TOP_Type type) {
+  public GeneTag(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
@@ -48,7 +48,7 @@ public class geneTag extends Annotation {
   /** @generated
    * @param jcas JCas to which this Feature Structure belongs 
    */
-  public geneTag(JCas jcas) {
+  public GeneTag(JCas jcas) {
     super(jcas);
     readObject();   
   } 
@@ -58,7 +58,7 @@ public class geneTag extends Annotation {
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
   */  
-  public geneTag(JCas jcas, int begin, int end) {
+  public GeneTag(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -84,18 +84,18 @@ public class geneTag extends Annotation {
    * @return value of the feature 
    */
   public String getID() {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_ID == null)
-      jcasType.jcas.throwFeatMissing("ID", "types.geneTag");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_ID);}
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_ID == null)
+      jcasType.jcas.throwFeatMissing("ID", "types.GeneTag");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_ID);}
     
   /** setter for ID - sets  
    * @generated
    * @param v value to set into the feature 
    */
   public void setID(String v) {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_ID == null)
-      jcasType.jcas.throwFeatMissing("ID", "types.geneTag");
-    jcasType.ll_cas.ll_setStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_ID, v);}    
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_ID == null)
+      jcasType.jcas.throwFeatMissing("ID", "types.GeneTag");
+    jcasType.ll_cas.ll_setStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_ID, v);}    
    
     
   //*--------------*
@@ -106,18 +106,18 @@ public class geneTag extends Annotation {
    * @return value of the feature 
    */
   public String getText() {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_Text == null)
-      jcasType.jcas.throwFeatMissing("Text", "types.geneTag");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_Text);}
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_Text == null)
+      jcasType.jcas.throwFeatMissing("Text", "types.GeneTag");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_Text);}
     
   /** setter for Text - sets  
    * @generated
    * @param v value to set into the feature 
    */
   public void setText(String v) {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_Text == null)
-      jcasType.jcas.throwFeatMissing("Text", "types.geneTag");
-    jcasType.ll_cas.ll_setStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_Text, v);}    
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_Text == null)
+      jcasType.jcas.throwFeatMissing("Text", "types.GeneTag");
+    jcasType.ll_cas.ll_setStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_Text, v);}    
    
     
   //*--------------*
@@ -128,18 +128,18 @@ public class geneTag extends Annotation {
    * @return value of the feature 
    */
   public String getCasProcessorId() {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "types.geneTag");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_casProcessorId);}
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_casProcessorId == null)
+      jcasType.jcas.throwFeatMissing("casProcessorId", "types.GeneTag");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets  
    * @generated
    * @param v value to set into the feature 
    */
   public void setCasProcessorId(String v) {
-    if (geneTag_Type.featOkTst && ((geneTag_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "types.geneTag");
-    jcasType.ll_cas.ll_setStringValue(addr, ((geneTag_Type)jcasType).casFeatCode_casProcessorId, v);}    
+    if (GeneTag_Type.featOkTst && ((GeneTag_Type)jcasType).casFeat_casProcessorId == null)
+      jcasType.jcas.throwFeatMissing("casProcessorId", "types.GeneTag");
+    jcasType.ll_cas.ll_setStringValue(addr, ((GeneTag_Type)jcasType).casFeatCode_casProcessorId, v);}    
   }
 
     

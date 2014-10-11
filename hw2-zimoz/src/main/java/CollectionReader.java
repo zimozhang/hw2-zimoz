@@ -16,7 +16,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 
-import types.sentenceTag;
+import types.SentenceTag;
 
 public class CollectionReader extends CollectionReader_ImplBase {
   
@@ -98,7 +98,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
   
   String file = records.get(mCurrentIndex++);
 //  System.out.println(file);
-  sentenceTag st = new sentenceTag(jcas);
+  SentenceTag st = new SentenceTag(jcas);
   st.setID(file.substring(0, 14));
   st.setText(file.substring(15, file.length()));
   st.addToIndexes();
